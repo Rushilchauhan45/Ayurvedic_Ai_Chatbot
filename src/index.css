@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-green: #1a472a;
+  --secondary-green: #2d6a4f;
+  --gold: #d4af37;
+  --light-gold: #f5e6c0;
+  --beige: #f5f0e1;
+  --dark-beige: #e6ddc6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply bg-beige text-gray-800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-gradient {
+  background: linear-gradient(rgba(26, 71, 42, 0.8), rgba(26, 71, 42, 0.6)), url('https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1984&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.nav-link {
+  @apply relative px-3 py-2 transition-all duration-300 hover:text-gold;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.dropdown {
+  @apply absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none transform opacity-0 scale-95 transition-all duration-200 ease-in-out pointer-events-none;
+}
+
+.dropdown-open {
+  @apply transform opacity-100 scale-100 pointer-events-auto;
+}
+
+.herb-card {
+  @apply relative overflow-hidden rounded-lg shadow-md transition-all duration-500 transform hover:-translate-y-2 hover:shadow-xl bg-white;
+}
+
+.herb-card-content {
+  @apply p-6 transition-all duration-500;
+}
+
+.herb-card:hover .herb-card-content {
+  @apply bg-primary-green text-white;
+}
+
+.quote-card {
+  @apply p-8 rounded-lg shadow-md bg-white border-l-4 border-gold;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-primary-green text-white rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:bg-secondary-green;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-gold text-primary-green rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:bg-light-gold;
+}
+
+.chatbot-message {
+  @apply p-4 rounded-lg max-w-[80%] mb-4;
+}
+
+.user-message {
+  @apply bg-light-gold text-primary-green ml-auto;
+}
+
+.bot-message {
+  @apply bg-primary-green text-white mr-auto;
+}
+
+.dark {
+  --primary-green: #2d6a4f;
+  --secondary-green: #40916c;
+  --gold: #ffd700;
+  --light-gold: #fff8e1;
+  --beige: #121212;
+  --dark-beige: #1e1e1e;
+  
+  @apply bg-[#121212] text-gray-200;
+}
+
+.dark .herb-card {
+  @apply bg-dark-beige;
+}
+
+.dark .herb-card:hover .herb-card-content {
+  @apply bg-secondary-green;
+}
+
+.dark .quote-card {
+  @apply bg-dark-beige;
+}
+
+/* chatbot css */
+/* .chatbot-div{
+  
+  padding-top: 50px;
+  margin-bottom: 100px;
+} */
