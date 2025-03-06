@@ -3,6 +3,9 @@
 
 Ayurvedic AI Chatbot is a smart virtual assistant designed to provide users with Ayurvedic remedies and wellness recommendations. This project is currently in development, with the UI completed. Features like user authentication, database integration, and AI-based responses are in progress.  
 
+## 🚀 Live Demo  
+🌐 **Try it here:** [Ayurvedic AI Chatbot](https://ayurvenectorai.netlify.app/)  
+
 ## 🚀 Project Status  
 - ✅ **UI Completed** (Designed with Tailwind CSS)  
 - ⏳ **User Authentication** (Upcoming)  
